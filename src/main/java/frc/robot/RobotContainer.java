@@ -76,12 +76,6 @@ SendableChooser<Command> m_chooser = new SendableChooser<>();
    */
   private void configureButtonBindings() {
 
-    final Trigger controlSchemeButton = new JoystickButton(m_driverController, 6);
-    controlSchemeButton.whileTrue(new controlSchemeRobot(m_robotDrive));
-
-    final Trigger controlSchemeButtonOff = new JoystickButton(m_driverController, 6);
-    controlSchemeButtonOff.whileFalse(new controlSchemeField(m_robotDrive));
-
     final Trigger resetHeadingButton = new JoystickButton(m_driverController, 5);
     resetHeadingButton.onTrue(new resetHeading(m_robotDrive));
 
